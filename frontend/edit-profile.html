@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialApp — Edit Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h2>SocialApp</h2>
+    <div class="nav-links">
+      <a href="feed.html">Feed</a>
+      <a href="search.html">Search</a>
+      <a href="messages.html">Messages</a>
+      <a href="notifications.html">Notifications<span id="notifBadge" class="nav-badge" style="display:none;"></span></a>
+      <a href="profile.html" id="myProfileLink">Profile</a>
+      <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <div class="auth-box" style="width:100%;">
+      <h1 style="text-align:left; font-style:normal;">Edit Profile</h1>
+
+      <div class="avatar-picker">
+        <div id="avatarPreview"></div>
+        <label class="file-label">
+          Change photo
+          <input type="file" id="editProfilePic" accept="image/*">
+        </label>
+      </div>
+
+      <form id="editProfileForm">
+        <input type="text" id="editName" placeholder="Full Name">
+        <input type="text" id="editUsername" placeholder="Username">
+        <textarea id="editBio" placeholder="Bio"></textarea>
+        <div class="toggle-row">
+          <span>Private account</span>
+          <input type="checkbox" id="editIsPrivate">
+        </div>
+        <button type="submit">Save Changes</button>
+      </form>
+      <p id="editMessage" class="error"></p>
+
+      <hr style="margin:24px 0; border:none; border-top:1px solid var(--line);">
+
+      <h1 style="text-align:left; font-style:normal; font-size:1.2rem;">Change Password</h1>
+      <form id="passwordForm">
+        <input type="password" id="currentPassword" placeholder="Current password" required>
+        <input type="password" id="newPassword" placeholder="New password" required minlength="6">
+        <button type="submit">Update Password</button>
+      </form>
+      <p id="passwordMessage" class="error"></p>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/edit-profile.js"></script>
+</body>
+</html>

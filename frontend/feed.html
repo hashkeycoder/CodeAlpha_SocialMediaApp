@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialApp — Feed</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feed.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h2>SocialApp</h2>
+    <div class="nav-links">
+      <a href="feed.html">Feed</a>
+      <a href="search.html">Search</a>
+      <a href="messages.html">Messages</a>
+      <a href="notifications.html">Notifications<span id="notifBadge" class="nav-badge" style="display:none;"></span></a>
+      <a href="profile.html" id="myProfileLink">Profile</a>
+      <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <div id="storyTray" class="story-tray"></div>
+    <input type="file" id="storyFileInput" accept="image/*,video/*" capture="environment" class="hidden">
+
+    <div class="composer">
+      <form id="composerForm">
+        <textarea id="composerCaption" placeholder="What's on your mind? Use #hashtags"></textarea>
+        <div class="composer-actions">
+          <input type="file" id="composerMedia" accept="image/*,video/*" required>
+          <button type="submit" class="primary-btn">Post</button>
+        </div>
+      </form>
+      <p id="composerMessage" class="error"></p>
+    </div>
+
+    <div id="feedList"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/comments-shared.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

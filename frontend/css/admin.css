@@ -1,0 +1,16 @@
+#statusFilter{width:auto;padding:8px 12px;font-size:.82rem}
+.report-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px;margin-bottom:14px}
+.report-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.report-reason{font-size:.85rem;font-weight:600}
+.report-meta{font-size:.75rem;color:var(--muted);margin-top:2px}
+.report-status{font-size:.7rem;font-weight:800;text-transform:uppercase;padding:3px 10px;border-radius:999px}
+.status-pending{background:var(--accent-soft);color:var(--accent)}
+.status-reviewed{background:var(--surface-2);color:var(--muted)}
+.report-target{display:flex;gap:10px;align-items:center;padding:10px;background:var(--surface-2);border-radius:var(--radius-sm);margin-bottom:12px}
+.report-target img{width:50px;height:50px;object-fit:cover;border-radius:8px}
+.report-actions{display:flex;gap:8px;flex-wrap:wrap}
+.report-actions button{width:auto;padding:8px 14px;font-size:.78rem}
+.dismiss-btn{background:var(--surface-2);color:var(--ink);border:1px solid var(--line)}
+.delete-post-btn{background:var(--danger);color:#fff;border:0}
+.ban-btn{background:var(--ink);color:#fff;border:0}
+.unban-btn{background:var(--surface-2);color:var(--ink);border:1px solid var(--line)}

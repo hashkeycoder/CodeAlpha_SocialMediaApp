@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialApp — Post</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feed.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h2>SocialApp</h2>
+    <div class="nav-links">
+      <a href="feed.html">Feed</a>
+      <a href="search.html">Search</a>
+      <a href="messages.html">Messages</a>
+      <a href="notifications.html">Notifications<span id="notifBadge" class="nav-badge" style="display:none;"></span></a>
+      <a href="profile.html" id="myProfileLink">Profile</a>
+      <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <div id="postContainer"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/comments-shared.js"></script>
+  <script src="js/post-view.js"></script>
+</body>
+</html>

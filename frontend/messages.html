@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialApp — Messages</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/messages.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h2>SocialApp</h2>
+    <div class="nav-links">
+      <a href="feed.html">Feed</a>
+      <a href="search.html">Search</a>
+      <a href="messages.html">Messages</a>
+      <a href="notifications.html">Notifications<span id="notifBadge" class="nav-badge" style="display:none;"></span></a>
+      <a href="profile.html" id="myProfileLink">Profile</a>
+      <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="messages-layout">
+    <div class="conversation-list">
+      <div class="conv-search">
+        <input type="text" id="userSearchInput" placeholder="Search people or chats...">
+      </div>
+      <button id="newGroupBtn" type="button" class="new-group-btn">+ New Group</button>
+      <div id="userSearchResults" class="user-search-results hidden"></div>
+      <div id="conversations"></div>
+    </div>
+
+    <div class="chat-panel">
+      <div id="chatHeader" class="chat-header hidden"></div>
+      <div id="chatMessages" class="chat-messages">
+        <p style="text-align:center; color:var(--muted); padding:40px 20px;">Select a conversation to start chatting.</p>
+      </div>
+      <form id="chatForm" class="chat-input hidden">
+        <input type="text" id="chatInput" placeholder="Type a message...">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="groupModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <h3>New Group</h3>
+      <input type="text" id="groupNameInput" placeholder="Group name (optional)">
+      <input type="text" id="groupMemberSearch" placeholder="Search people to add...">
+      <div id="groupMemberResults" class="user-search-results"></div>
+      <div id="groupSelectedMembers" class="group-selected-members"></div>
+      <div class="modal-actions">
+        <button id="groupCancelBtn" class="modal-cancel-btn">Cancel</button>
+        <button id="groupCreateBtn" class="primary-btn">Create Group</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/messages.js"></script>
+</body>
+</html>
