@@ -119,7 +119,7 @@ function renderPost(post) {
         ) : ''}
       </a>
       <div id="caption-${post.id}" data-caption="${(post.caption || '').replace(/"/g, '&quot;')}">
-        ${post.caption ? `<p class="post-caption"><strong>${post.user.username}</strong>${post.caption}</p>` : ''}
+        ${post.caption ? `<p class="post-caption"><strong>${post.user.username}</strong>${linkifyHashtags(post.caption)}</p>` : ''}
       </div>
       <div class="post-actions">
         <button onclick="toggleLike('${post.id}', this)" data-liked="false">🤍</button>

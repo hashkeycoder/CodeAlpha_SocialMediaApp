@@ -112,3 +112,8 @@ async function submitReply(parentId) {
     alert('Failed to post reply');
   }
 }
+
+// Turns #tags in a caption into links to the hashtag page
+function linkifyHashtags(text) {
+  return (text || '').replace(/#(\w+)/g, '<a href="hashtag.html?tag=$1" style="color:var(--primary); font-weight:600;">#$1</a>');
+}

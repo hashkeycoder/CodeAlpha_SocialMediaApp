@@ -60,7 +60,7 @@ async function loadPost() {
             : `<img src="${API_BASE.replace('/api', '')}${post.mediaUrl}" class="post-media" alt="post media">`
         ) : ''}
         <div id="captionBox" data-caption="${(post.caption || '').replace(/"/g, '&quot;')}">
-          ${post.caption ? `<p class="post-caption"><strong>${post.user.username}</strong>${post.caption}</p>` : ''}
+          ${post.caption ? `<p class="post-caption"><strong>${post.user.username}</strong>${linkifyHashtags(post.caption)}</p>` : ''}
         </div>
         <div class="post-actions">
           <button onclick="toggleLike(this)" data-liked="${iLiked}">${iLiked ? '❤️' : '🤍'}</button>

@@ -68,7 +68,7 @@ async function runSearch() {
         <div class="result-section">
           <h3>Hashtags</h3>
           ${data.hashtags.map(h => `
-            <a href="#" class="hashtag-result">#${h.tag}<span>${h._count.posts} posts</span></a>
+            <a href="hashtag.html?tag=${h.tag}" class="hashtag-result">#${h.tag}<span>${h._count.posts} posts</span></a>
           `).join('')}
         </div>
       `;
